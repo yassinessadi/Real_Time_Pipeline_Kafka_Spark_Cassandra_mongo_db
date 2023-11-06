@@ -3,8 +3,52 @@
 
 # Configuration and Dependencies :
 Install the required libraries and dependencies for `Spark`, `pyspark` `Kafka`, `Cassandra`, and `MongoDB` `:`
+
 ## Kafka Installation & Configuration.
+> To begin, we will first explain the installation process for Kafka and how to use it. Let's get started!
 >To install Kafka, follow the [link](https://kafka.apache.org/downloads). In my case, I'm using Kafka version 3.6.0 [link to binary](href="https://downloads.apache.org/kafka/3.6.0/kafka_2.12-3.6.0.tgz).
+
+After completing the installation, please make sure to extract the files and place them in the `C:/kafka` directory, naming it as desired. Next, open the Windows environment variables by typing `env` in the Windows search bar and add the following path: `C:\kafka\bin\windows`. Ensure that you select the `windows` directory inside the 'bin' folder.
+
+Now, let's get the work done by running Kafka and Zookeeper.
+#### Usage Instructions:
+First, open the 'C:/kafka' directory with your command prompt and then type the following command To Start zookeeper & kafka:
+```bash
+zookeeper-server-start.bat ..\..\config\zookeeper.properties
+```
+open new command prompt and type:
+```bash
+kafka-server-start.bat ..\..\config\server.properties
+```
+
+To ensure everything is ready to go, please execute the following command below to create a topic. In my case, I named it 'first_topic,' but you can choose any name you prefer. Voilà, your topic is now created!
+```bash
+kafka-topics --bootstrap-server 127.0.0.1:9092 --topic first_topic --create --partitions 3 --replication-factor 1
+```
+
+Note: I'm using the IP address `127.0.0.1` (`localhost`) on the default port `9092`.
+
+If you want to check or list your topics, please enter the following command:
+
+```bash
+kafka-topics.bat --list --bootstrap-server localhost:9092
+```
+Topic describe :
+```bash
+kafka-topics --bootstrap-server 127.0.0.1:9092 --topic user_profiles --describe
+```
+Create console producer :
+```bash
+kafka-console-producer.bat --broker-list localhost:9092 --topic first_topic
+```
+Create console consumer :
+```bash
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic first_topic --from-beginning
+```
+
+
+
+
 ## SPARK Installation & Configuration.
 >later
 ## CASSANDRA Installation & Configuration.
