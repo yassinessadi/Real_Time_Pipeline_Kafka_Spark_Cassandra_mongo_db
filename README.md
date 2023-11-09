@@ -76,14 +76,17 @@ If any problems occur, please check if python is installed on your computer make
 
 
 ## CASSANDRA Installation & Configuration.
->later
+> We are going to install Cassandra on Docker. Please follow this [link](https://cassandra.apache.org/_/quickstart.html) for instructions.
+
 ## MONGODB Installation & Configuration.
+> The process for MongoDB is the same and quite straightforward. Please ensure everything is good to go.
 
 # Project:
-## Kafka Producer using `(confluent-kafka)`:
+
+## Kafka Producer using `(confluent-kafka lib)`:
 > fetches random user data from the API (randomuser) and streams it to a Kafka topic, creating a data pipeline for further processing or analysis.
 
-## PySpark Consumer using `(confluent-kafka)`:
+## PySpark Consumer for `real-time` processing:
 
 - Utilize the provided code to extract data from the Kafka topic "jane__essadi__topic."
 
