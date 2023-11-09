@@ -85,16 +85,16 @@ If any problems occur, please check if python is installed on your computer make
 
 ## PySpark Consumer using `(confluent-kafka)`:
 
--- Utilize the provided code to extract data from the Kafka topic "jane__essadi__topic."
+- Utilize the provided code to extract data from the Kafka topic "jane__essadi__topic."
 
--- Implement data transformations, which encompass parsing, validation, and data enrichment.
--- insert data into Cassandra
+- Implement data transformations, which encompass parsing, validation, and data enrichment.
+- insert data into Cassandra
 
--- Execute data aggregation to derive insights, such as the count of users by nationality and the average user age. Store these results in MongoDB through the `save_to_mongodb_collection` function.
+- Execute data aggregation to derive insights, such as the count of users by nationality and the average user age. Store these results in MongoDB through the `save_to_mongodb_collection` function.
 
--- Configure debugging and monitoring mechanisms to track the pipeline's performance and identify potential issues.
+- Configure debugging and monitoring mechanisms to track the pipeline's performance and identify potential issues.
 
--- Develop data visualization dashboards with Python Dash to present aggregated data effectively.
+- Develop data visualization dashboards with Python Dash to present aggregated data effectively.
 
 - Verify the accurate insertion of data into the Cassandra table and MongoDB collections.
 
